@@ -20,7 +20,7 @@ limitations under the License.
 
 # safeintmin
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Return the minimum safe integer capable of being represented by a numeric real type.
 
@@ -184,9 +184,9 @@ $ safeintmin float16
 
 ## See Also
 
--   [`@stdlib/utils/safe-int-max`][@stdlib/utils/safe-int-max]: return the maximum safe integer capable of being represented by a numeric real type.
--   [`@stdlib/utils/real-min`][@stdlib/utils/real-min]: return the smallest positive normal value capable of being represented by a numeric real type.
--   [`@stdlib/utils/type-min`][@stdlib/utils/type-min]: return the minimum value of a specified numeric type.
+-   <span class="package-name">[`@stdlib/utils/safe-int-max`][@stdlib/utils/safe-int-max]</span><span class="delimiter">: </span><span class="description">return the maximum safe integer capable of being represented by a numeric real type.</span>
+-   <span class="package-name">[`@stdlib/utils/real-min`][@stdlib/utils/real-min]</span><span class="delimiter">: </span><span class="description">return the smallest positive normal value capable of being represented by a numeric real type.</span>
+-   <span class="package-name">[`@stdlib/utils/type-min`][@stdlib/utils/type-min]</span><span class="delimiter">: </span><span class="description">return the minimum value of a specified numeric type.</span>
 
 </section>
 
@@ -237,8 +237,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-safe-int-min/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-safe-int-min?branch=main
 
+<!--
+
 [dependencies-image]: https://img.shields.io/david/stdlib-js/utils-safe-int-min.svg
 [dependencies-url]: https://david-dm.org/stdlib-js/utils-safe-int-min/main
+
+-->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
