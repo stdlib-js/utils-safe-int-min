@@ -1,0 +1,4 @@
+// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import t from"https://cdn.jsdelivr.net/gh/stdlib-js/string-format@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/constants-float16-min-safe-integer@esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/constants-float32-min-safe-integer@esm/index.mjs";import n from"https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-min-safe-integer@esm/index.mjs";var r=t,i=e,a=s,o=n;var d=function(t){switch(t){case"float64":return o;case"float32":return a;case"float16":return i;default:throw new TypeError(r("invalid argument. Must provide a recognized type. Value: `%s`.",t))}};export{d as default};
+//# sourceMappingURL=index.mjs.map
