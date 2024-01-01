@@ -45,31 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/utils-safe-int-min
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var safeintmin = require( '@stdlib/utils-safe-int-min' );
+safeintmin = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var safeintmin = require( 'path/to/vendor/umd/utils-safe-int-min/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.safeintmin;
+})();
+</script>
 ```
 
 #### safeintmin( dtype )
@@ -107,8 +114,13 @@ The following numeric **real** types are supported:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var safeintmin = require( '@stdlib/utils-safe-int-min' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var m = safeintmin( 'float64' );
 // returns -9007199254740991
@@ -118,6 +130,11 @@ m = safeintmin( 'float32' );
 
 m = safeintmin( 'float16' );
 // returns -2047
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -126,69 +143,7 @@ m = safeintmin( 'float16' );
 
 <!-- Section for describing a command-line interface. -->
 
-* * *
 
-<section class="cli">
-
-## CLI
-
-<section class="installation">
-
-## Installation
-
-To use as a general utility, install the CLI package globally
-
-```bash
-npm install -g @stdlib/utils-safe-int-min-cli
-```
-
-</section>
-<!-- CLI usage documentation. -->
-
-
-<section class="usage">
-
-### Usage
-
-```text
-Usage: safeintmin [options] <dtype>
-
-Options:
-
-  -h,    --help                Print this message.
-  -V,    --version             Print the package version.
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- CLI usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```bash
-$ safeintmin float16
--2047
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -289,11 +244,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/utils/safe-int-max]: https://github.com/stdlib-js/utils-safe-int-max
+[@stdlib/utils/safe-int-max]: https://github.com/stdlib-js/utils-safe-int-max/tree/umd
 
-[@stdlib/utils/real-min]: https://github.com/stdlib-js/utils-real-min
+[@stdlib/utils/real-min]: https://github.com/stdlib-js/utils-real-min/tree/umd
 
-[@stdlib/utils/type-min]: https://github.com/stdlib-js/utils-type-min
+[@stdlib/utils/type-min]: https://github.com/stdlib-js/utils-type-min/tree/umd
 
 <!-- </related-links> -->
 
