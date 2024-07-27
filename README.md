@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import safeintmin from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-safe-int-min/tags). For example,
+
+```javascript
 import safeintmin from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@v0.2.2-esm/index.mjs';
 ```
 
@@ -96,7 +101,7 @@ The following numeric **real** types are supported:
 <body>
 <script type="module">
 
-import safeintmin from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@v0.2.2-esm/index.mjs';
+import safeintmin from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-safe-int-min@esm/index.mjs';
 
 var m = safeintmin( 'float64' );
 // returns -9007199254740991
