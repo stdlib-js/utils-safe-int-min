@@ -45,25 +45,94 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/utils-safe-int-min
+```
 
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var safeintmin = require( '@stdlib/utils-safe-int-min' );
+```
+
+#### safeintmin( dtype )
+
+Returns the minimum **safe** integer capable of being represented by a numeric **real** type.
+
+```javascript
+var m = safeintmin( 'float64' );
+// returns -9007199254740991
+```
+
+The following numeric **real** types are supported:
+
+-   `float64`: double-precision floating-point numbers
+-   `float32`: single-precision floating-point numbers
+-   `float16`: half-precision floating-point numbers
+
+</section>
+
+<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
+<section class="notes">
 
+</section>
+
+<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
+<section class="examples">
 
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var safeintmin = require( '@stdlib/utils-safe-int-min' );
+
+var m = safeintmin( 'float64' );
+// returns -9007199254740991
+
+m = safeintmin( 'float32' );
+// returns -16777215
+
+m = safeintmin( 'float16' );
+// returns -2047
+```
+
+</section>
+
+<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -81,7 +150,7 @@ npm install -g @stdlib/utils-safe-int-min-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: safeintmin [options] <dtype>
@@ -108,7 +177,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ safeintmin float16
@@ -135,9 +204,10 @@ $ safeintmin float16
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/utils-safe-int-min`][@stdlib/utils-safe-int-min]</span><span class="delimiter">: </span><span class="description">return the minimum safe integer capable of being represented by a numeric real type.</span>
 -   <span class="package-name">[`@stdlib/utils-safe-int-max`][@stdlib/utils/safe-int-max]</span><span class="delimiter">: </span><span class="description">return the maximum safe integer capable of being represented by a numeric real type.</span>
 -   <span class="package-name">[`@stdlib/utils-real-min`][@stdlib/utils/real-min]</span><span class="delimiter">: </span><span class="description">return the smallest positive normal value capable of being represented by a numeric real type.</span>
 -   <span class="package-name">[`@stdlib/utils-type-min`][@stdlib/utils/type-min]</span><span class="delimiter">: </span><span class="description">return the minimum value of a specified numeric type.</span>
@@ -159,7 +229,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -182,11 +252,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/utils-safe-int-min-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/utils-safe-int-min-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/utils-safe-int-min.svg
+[npm-url]: https://npmjs.org/package/@stdlib/utils-safe-int-min
 
-[test-image]: https://github.com/stdlib-js/utils-safe-int-min/actions/workflows/test.yml/badge.svg?branch=v0.2.3
-[test-url]: https://github.com/stdlib-js/utils-safe-int-min/actions/workflows/test.yml?query=branch:v0.2.3
+[test-image]: https://github.com/stdlib-js/utils-safe-int-min/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/utils-safe-int-min/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-safe-int-min/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-safe-int-min?branch=main
